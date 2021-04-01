@@ -1,0 +1,106 @@
+body{
+    background-color: aquamarine;
+}
+
+h1{
+    font-size: 3em;
+    text-align: center;
+    color: midnightblue;   
+}
+
+div{
+    margin: 50px;
+}
+
+ul{
+    background-color: coral;
+}
+
+ul li:nth-child(odd){
+   background-color: lightcoral; 
+}
+
+ol{
+    background-color: coral;
+}
+
+ol li:nth-child(odd){
+    background-color: lightcoral; 
+ }
+
+.blogpost{
+    background-color: lightslategray;
+    padding: 3%;
+}
+
+.blogheader{
+    background-color: lightslategray;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.clientpic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+}
+
+.clientdescr{
+    text-align: center;
+    font-style:  italic;
+}
+
+.hobbies{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.imgdescr{
+    font-weight: bold;
+    text-align: center;
+}
+
+.tagtext{
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.date{
+    font-weight: 100;
+    font-style: italic;
+}
+
+#htmlelements{
+    background-color: darkgoldenrod;
+}
+
+#htmlentities{
+    background-color: white;
+}
+
+#cssselectors{
+    background-color: darkorange;
+}
+
+#cssproperties{
+    background-color: darkred;
+}
+
+#htmlelementsitems{
+    background-color: darkgoldenrod;
+}
+
+#htmlentitiesitems{
+    background-color: white;
+}
+
+#cssselectorsitems{
+    background-color: darkorange;
+}
+
+#csspropertiesitems{
+    background-color: darkred;
+}

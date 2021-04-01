@@ -1,0 +1,49 @@
+{%load static%}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="{%static 'blog/style.css'%}"/>
+        <title>about</title>
+    </head>
+
+    <body>
+        <h3>Todays Date: {{now}}</h3>
+        <h1>John Wayne</h1>
+
+        <div>
+            <ol>
+                <li><a href="index.html">main</a></li>
+                <li><a href="techtips-css.html">techtips-css</a></li>
+                <li><a href="techtips+css.html">techtips+css</a></li>
+            </ol>
+        </div>
+
+        <div>   
+            <img src="{%static 'blog/images/people-875597_1280.jpg'%}" alt="Self Portrait" class="clientpic">
+            <p class="clientdescr">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+        </div>
+
+        <div>
+            <img src="{%static 'blog/images/cowboy-940083_1280.jpg'%}" alt="I would consider myself a gunslinger" class="hobbies">
+            <p class="imgdescr">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."</p>
+        </div>
+
+        <div>
+            <img src="{%static 'blog/images/sunset-3085578_1280.jpg'%}" alt="I enjoy riding horses" class="hobbies">
+            <p class="imgdescr">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."</p>
+        </div>
+
+        <div>
+            <img src="{%static 'blog/images/guitar-174931_1280.jpg'%}" alt="I like to play guitar" class="hobbies">
+            <p class="imgdescr">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."</p>
+        </div>
+                
+
+    </body>
+</html>

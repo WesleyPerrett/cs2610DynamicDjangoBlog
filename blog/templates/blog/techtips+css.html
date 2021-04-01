@@ -1,0 +1,94 @@
+{%load static%}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="{%static 'blog/style.css'%}"/>
+        <title>techtips+css</title>
+    </head>
+
+    <body>
+        <h3>Todays Date: {{now}}</h3>
+		<h1>Techtips + Css</h1>
+
+        <div>
+            <ol>
+                <li><a href="index.html">main</a></li>
+                <li><a href="techtips-css.html">techtips-css</a></li>
+                <li><a href="about.html">about</a></li>
+            </ol>
+        </div>
+
+        <div id="htmlelements">
+            <h3>HTML Elements</h3>
+
+            <ul id="htmlelementsitems">
+                <li><code class="tagtext">&lt;html&gt;</code>: this tag tells the web browser how to interpret the content of your page so it can format and display it properly. Neither a block or in-line element, 
+                everything on the webpage goes within this tag. </li>
+                <li><code class="tagtext">&lt;head&gt;</code>: this tag is a container for metadata pertaining to the webpage. It is neither a block or in-line element. </li>
+                <li><code class="tagtext">&lt;meta&gt;</code>: this tag is a definition for metadata pertaining to the webpage. It is neither a block or in-line element. 
+                    Must have <code class="tagtext">&lt;head&gt;</code> as a parent element. </li>
+                <li><code class="tagtext">&lt;link&gt;</code>: this tag is used to reference external rescources and is most commonly used for stylesheets. 
+                    It is neither a block or in-line element. Must have <code class="tagtext">&lt;head&gt;</code> as a parent element. </li>
+                <li><code class="tagtext">&lt;title&gt;</code>: this tag is used for the title that shows up in the tab on the web browser. It is neither a block or in-line element. 
+                    Must have <code class="tagtext">&lt;head&gt;</code> as a parent element.</li>
+                <li><code class="tagtext">&lt;body&gt;</code>: this tag contains all of the "body" of the webpage so all of the actual content seen by the user. It is neither a block or in-line element.
+                    This is the parent element of all of the elements below it in the list. </li>
+                <li><code class="tagtext">&lt;h1-h6&gt;</code>: These tags are meant for differing sizes of text. Each one in ascending order gets gradually bigger. This is an example of a block element. </li>
+                <li><code class="tagtext">&lt;ul&gt;</code>: this tag stands for "unorderd list" it has <code class="tagtext">&lt;li&gt;</code> tags as its children. This creates a bulleted list in no particular
+                    order. This is an exapmle of a block level element. </li>
+                <li><code class="tagtext">&lt;ul&gt;</code>: this tag stands for "orderd list" it has <code class="tagtext">&lt;li&gt;</code> tags as its children. This creates a numbered list that is orderd from top
+                    to bottom of the <code class="tagtext">&lt;li&gt;</code> tags. This is an example of a block level element.</li>
+                <li><code class="tagtext">&lt;li&gt;</code>: this tag stands for "list item" and is has a parent element of either <code class="tagtext">&lt;ul&gt;</code> or <code class="tagtext">&lt;ul&gt;</code>.
+                    these <code class="tagtext">&lt;li&gt;</code> tags will show up as either a bulleted list or a numberd list depending on the parent element. This is an example of a block level element. </li>
+                <li><code class="tagtext">&lt;div&gt;</code>: this tag is used to represent a division on a webpage and helps to organize information as well as implement css. This is an example of a block level element. </li>
+                <li><code class="tagtext">&lt;p&gt;</code>: this tag stands for "paragraph" it is a way to handle multi line text on a webpage efficiently. This is an example of a block level element. </li>
+                <li><code class="tagtext">&lt;br&gt;</code>: this tag stands for break in a line so essentially an enter. This tag is empty. </li>
+            </ul>
+        </div>
+
+        <div id="htmlentities">
+            <h3>HTML Entities</h3>
+
+            <ul id="htmlentitiesitems">
+                <li><code class="tagtext">&amp;lt;</code>: this is for a <code class="tagtext">&lt;</code> symbul and we use this syntax so the html can render the symbul instead of use it as a tag. </li>
+                <li><code class="tagtext">&amp;gt;</code>: this is for a <code class="tagtext">&gt;</code> symbul and we use this syntax so the html can render the symbul instead of use it as a tag. </li>
+                <li><code class="tagtext">&amp;apm;</code>: this is for a <code class="tagtext">&gt;</code> symbul and we use this syntax so the html can render the symbul instead of use it as a tag. </li>
+                <li><code class="tagtext">&amp;nbsp;</code>: this tag does not have a symbul but is used for a non-breaking space. </li>
+                <li><code class="tagtext">&amp;quot;</code>: this is for a <code class="tagtext">&quot;</code> symbul and we use this syntax so the html can render the symbul instead of use it as a tag. </li>
+                <li><code class="tagtext">&amp;apos;</code>: this is for a <code class="tagtext">&apos;</code> symbul and we use this syntax so the html can render the symbul instead of use it as a tag. </li>
+            </ul>
+        </div>
+
+        <div id="cssselectors">
+            <h3>Css Selectors</h3>
+
+            <ul id="cssselectorsitems">
+                <li><code class="tagtext">element</code>: the element selector is shown by the name of the tag of the element ex(<code class="tagtext">p, div, ul</code>) </li>
+                <li><code class="tagtext">class</code>: the class selector is shown by a <code class="tagtext">.</code> before the name of the class ex(<code class="tagtext">.classname</code>) </li>
+                <li><code class="tagtext">id</code>: the id selector is shown by a <code class="tagtext">#</code> ex(<code class="tagtext">#idname</code>) </li>
+
+            </ul>
+        </div>
+
+        <div id="cssproperties">
+            <h3>CSS Properties</h3>
+
+            <ul id="csspropertiesitems">
+                <li><code class="tagtext">background-culor</code>: this property is used for the background culor of the selector. </li>
+                <li><code class="tagtext">font-size</code>: this property is used for the font size of the selector.</li>
+                <li><code class="tagtext">text-align</code>: this property is used for the alignment of the text in the selector. </li>
+                <li><code class="tagtext">margin</code>: this property is used to create space around the elements in the selector. </li>
+                <li><code class="tagtext">font-weight</code>: this property is used to set the font to buld. </li>
+                <li><code class="tagtext">font-family</code>: this property sets the font type for the words in the selector. </li>
+                <li><code class="tagtext">padding</code>: this property is used to create space around content inside of the elements that are in the selector. </li>
+                <li><code class="tagtext">culor</code>: this property is used to set the culor of the text inside of the selector. </li>
+                <li><code class="tagtext">font-style</code>: this property is used to style text with italics or underlined. </li>
+                <li><code class="tagtext">width</code>: this property is used to set how much of a page an element will span. </li>
+
+            </ul>
+        </div>
+
+    </body>
+</html>

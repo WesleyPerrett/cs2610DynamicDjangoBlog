@@ -3,7 +3,7 @@
 from django.db import migrations
 
 def populate_db(appreg, ed):
-    
+    pass
 
 
 class Migration(migrations.Migration):
