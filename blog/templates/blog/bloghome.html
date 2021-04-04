@@ -1,0 +1,41 @@
+{%load static%}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="{%static 'blog/style.css'%}"/>
+        <title>home</title>
+    </head>
+
+    <body>
+        <h1>Home</h1>
+
+        <div>
+            <ol>
+                <li><a href="{% url 'blog:about' %}">about</a></li>
+                <li><a href="{% url 'blog:tips' %}">tips</a></li>
+                <li><a href="{% url 'blog:archive' %}">archive</a></li>
+                <li><a href="{% url 'blog:entry' %}">entry</a></li>
+            </ol>
+        </div>
+
+        {% if blogPosts %}
+
+            {% for b in blogPosts%}
+
+                <div class="post">
+
+                    <h2>{{b.title}}</h2>
+                    <h3>Author: {{b.author}}</h3>
+                    <h3>Date: {{b.posted}}</h3>
+                    <p>{{b.content}}</p>
+                    <p>This blog has {{b.comment_set.all | length}} comments ...</p>
+                    
+                </div>
+            {% endfor %}
+        {% else %}
+                <p>No blog posts are available.</p>
+        {% endif %}
+    </body>
+</html>

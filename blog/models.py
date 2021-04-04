@@ -9,36 +9,39 @@ class Blog(models.Model):
     content = models.TextField()
     posted = models.DateTimeField('date posted')
 
-    # def __str__(self):
-    #     return self.title
+    def __str__(self):
+        return self.title
 
-    # def __str__(self):
-    #     return self.author
+    def __str__(self):
+        return self.author
 
-    # def __str__(self):
-    #     return self.content
+    def __str__(self):
+        return self.content
     
-    # def posted_date(self):
-    #     return self.posted
+    def posted_date(self):
+        return self.posted
 
-class Comments(models.Model):
+class Comment(models.Model):
     blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
     commenter = models.CharField(max_length=128)
     email = models.EmailField(max_length=128)
     content = models.TextField()
     posted = models.DateTimeField('date posted')
         
-    # def __str__(self):
-    #     return self.commenter
+    def __str__(self):
+        return self.commenter
 
-    # def __str__(self):
-    #     return self.email
+    def __str__(self):
+        return self.email
 
-    # def __str__(self):
-    #     return self.content
+    def __str__(self):
+        return self.content
     
-    # def posted_date(self):
-    #     return self.posted
+    def posted_date(self):
+        return self.posted
     
 class About(models.Model):
+    current_date = models.DateTimeField('current date')
+
+class Tips(models.Model):
     current_date = models.DateTimeField('current date')

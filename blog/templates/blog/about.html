@@ -14,9 +14,10 @@
 
         <div>
             <ol>
-                <li><a href="index.html">main</a></li>
-                <li><a href="techtips-css.html">techtips-css</a></li>
-                <li><a href="techtips+css.html">techtips+css</a></li>
+                <li><a href="{% url 'blog:home' %}">home</a></li>
+                <li><a href="{% url 'blog:tips' %}">tips</a></li>
+                <li><a href="{% url 'blog:archive' %}">archive</a></li>
+                <li><a href="{% url 'blog:entry' %}">entry</a></li>
             </ol>
         </div>
 
@@ -31,17 +32,17 @@
 
         <div>
             <img src="{%static 'blog/images/cowboy-940083_1280.jpg'%}" alt="I would consider myself a gunslinger" class="hobbies">
-            <p class="imgdescr">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."</p>
+            <p class="descr">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."</p>
         </div>
 
         <div>
             <img src="{%static 'blog/images/sunset-3085578_1280.jpg'%}" alt="I enjoy riding horses" class="hobbies">
-            <p class="imgdescr">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."</p>
+            <p class="descr">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."</p>
         </div>
 
         <div>
             <img src="{%static 'blog/images/guitar-174931_1280.jpg'%}" alt="I like to play guitar" class="hobbies">
-            <p class="imgdescr">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."</p>
+            <p class="descr">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."</p>
         </div>
                 
 

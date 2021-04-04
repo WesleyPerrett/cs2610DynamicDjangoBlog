@@ -1,0 +1,50 @@
+{%load static%}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="{%static 'blog/style.css'%}"/>
+        <title>entry</title>
+    </head>
+
+    <body>
+        <h1>Entry</h1>
+
+        <div>
+            <ol>
+                <li><a href="{% url 'blog:home' %}">home</a></li>
+                <li><a href="{% url 'blog:about' %}">about</a></li>
+                <li><a href="{% url 'blog:tips' %}">tips</a></li>
+                <li><a href="{% url 'blog:archive' %}">archive</a></li>
+            </ol>
+        </div>
+
+        <div class="post">
+
+            <h2>{{blogPost.title}}</h2>
+            <h3>Author: {{blogPost.author}}</h3>
+            <h3>Date: {{blogPost.posted}}</h3>
+            <p>{{blogPost.content}}</p>
+            
+        </div>
+
+    {% if comments %}
+
+        {% for c in comments%}
+
+            <div class="comments">
+
+                <p class="descr">Commenter: {{c.commenter}}</p>
+                <p class="bold">Email: {{c.email}}</p>
+                <p class="bold">Date: {{c.posted}}</p>
+                <p>{{c.content}}</p>
+                
+            </div>
+        {% endfor %}
+    {% else %}
+            <p>No comments exist for this post</p>
+    {% endif %}
+
+    </body>
+</html>

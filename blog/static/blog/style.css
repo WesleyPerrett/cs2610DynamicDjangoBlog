@@ -5,7 +5,23 @@ body{
 h1{
     font-size: 3em;
     text-align: center;
-    color: midnightblue;   
+    color: black;
+}
+
+h2{
+    text-align: center;
+}
+
+.post{
+    background-color: coral;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.comments{
+    background-color: lightcoral;
+    border-radius: 25px;
+    padding: 20px;
 }
 
 div{
@@ -58,7 +74,7 @@ ol li:nth-child(odd){
     width: 50%;
 }
 
-.imgdescr{
+.descr{
     font-weight: bold;
     text-align: center;
 }
@@ -103,4 +119,8 @@ ol li:nth-child(odd){
 
 #csspropertiesitems{
     background-color: darkred;
+}
+
+.bold{
+    font-weight: bold;
 }

@@ -14,9 +14,10 @@
 
         <div>
             <ol>
-                <li><a href="index.html">main</a></li>
-                <li><a href="techtips-css.html">techtips-css</a></li>
-                <li><a href="about.html">about</a></li>
+                <li><a href="{% url 'blog:home' %}">home</a></li>
+                <li><a href="{% url 'blog:about' %}">about</a></li>
+                <li><a href="{% url 'blog:archive' %}">archive</a></li>
+                <li><a href="{% url 'blog:entry' %}">entry</a></li>
             </ol>
         </div>
 
