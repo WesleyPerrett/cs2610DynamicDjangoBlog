@@ -16,7 +16,6 @@
                 <li><a href="{% url 'blog:home' %}">home</a></li>
                 <li><a href="{% url 'blog:about' %}">about</a></li>
                 <li><a href="{% url 'blog:tips' %}">tips</a></li>
-                <li><a href="{% url 'blog:entry' %}">entry</a></li>
             </ol>
         </div>
 
@@ -29,7 +28,7 @@
                     <h2>{{b.title}}</h2>
                     <h3>Author: {{b.author}}</h3>
                     <h3>Date: {{b.posted}}</h3>
-                    <p>{{b.content}}</p>
+                    <p>{{b.content | truncatewords:100}}</p>
                     <p>This blog has {{b.comment_set.all | length}} comments ...</p>
                     
                 </div>

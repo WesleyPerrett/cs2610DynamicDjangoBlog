@@ -20,6 +20,7 @@
             </ol>
         </div>
 
+    {% if blogPost %}
         <div class="post">
 
             <h2>{{blogPost.title}}</h2>
@@ -28,23 +29,27 @@
             <p>{{blogPost.content}}</p>
             
         </div>
+    {% else %}
+        <p>No blog exists with that ID</p>
+    {% endif %}
+    
+    {% if blogPost.comment_set.all %}
 
-    {% if comments %}
-
-        {% for c in comments%}
+        {% for comment in blogPost.comment_set.all reversed %}
 
             <div class="comments">
 
-                <p class="descr">Commenter: {{c.commenter}}</p>
-                <p class="bold">Email: {{c.email}}</p>
-                <p class="bold">Date: {{c.posted}}</p>
-                <p>{{c.content}}</p>
+                <p class="descr">Commenter: {{comment.commenter}}</p>
+                <p class="bold">Email: {{comment.email}}</p>
+                <p class="bold">Date: {{comment.posted}}</p>
+                <p>{{comment.content}}</p>
                 
             </div>
         {% endfor %}
     {% else %}
             <p>No comments exist for this post</p>
     {% endif %}
-
+    
+    <div class="comments"><a href="{% url 'blog:addcomment' blogPost.pk%}">Add Comment</a></div>
     </body>
 </html>

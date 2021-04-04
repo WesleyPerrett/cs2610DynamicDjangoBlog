@@ -1,0 +1,36 @@
+{%load static%}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="{%static 'blog/style.css'%}"/>
+        <title>add comment</title>
+    </head>
+
+    <body>
+        <h1>Add Comment</h1>
+
+        <div class="comments">
+
+            <form action="{% url 'blog:entry' blogPost.pk %}" method="post">
+                {% csrf_token %}
+                
+                <label for="commenter">Full Name:</label>
+                <input type="text" name="commenter" id="commenter" ><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email"><br><br>
+
+                <label for="content">Comment:</label>
+                <input type="text" name="content" id="content"><br><br>
+                
+                <input type="submit" value="Add Comment">
+            </form>
+        </div>
+
+
+    </body>
+</html>
+
+
